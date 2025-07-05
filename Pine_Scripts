@@ -1,0 +1,17 @@
+
+---
+
+## 📝 Sample Pine Script (public-safe)
+
+📁 `pine_scripts/sample_indicator_v6.pine`:
+```pinescript
+//@version=6
+indicator("MES Demo Indicator", overlay=true)
+
+rsiVal = ta.rsi(close, 14)
+maFast = ta.sma(close, 9)
+maSlow = ta.sma(close, 21)
+
+plot(rsiVal, title="RSI", color=color.blue)
+plot(maFast, title="MA Fast", color=color.green)
+plot(maSlow, title="MA Slow", color=color.red)
